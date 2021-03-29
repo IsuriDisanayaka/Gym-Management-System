@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-06T22:10:17 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WorkOut" pageWidth="595" pageHeight="450" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b5d0cf0-9bac-4f86-8f24-2e3ad3c1c720">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Schedule]]>
+	</queryString>
+	<field name="schId" class="java.lang.String"/>
+	<field name="mId" class="java.lang.String"/>
+	<field name="wName" class="java.lang.String"/>
+	<field name="setRound" class="java.lang.String"/>
+	<group name="schId">
+		<groupExpression><![CDATA[$F{schId}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="10" width="100" height="30" forecolor="#B838CF" backcolor="#40168A" uuid="0330a065-13e5-4440-83ef-339cd2cdf903"/>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Schedule]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="40" width="210" height="30" uuid="98de3da4-c8e3-4f0f-b95e-002fcebde445"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[STOP WISHING START DOING]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="-11" y="0" width="101" height="20" uuid="d383437b-6eb2-4c8d-9521-59f6c2c95de8"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="-10" y="30" width="100" height="20" uuid="6dc9259f-15c2-4d15-b733-52de8616e79e"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="30" width="100" height="30" forecolor="#2A00FF" uuid="52d6bf45-5053-48e7-b32f-9573a4ba8ad9"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Schedule Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="30" width="100" height="30" forecolor="#1500FF" uuid="21800acb-2f93-468d-9ff9-003f0787bd0e"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Member Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="30" width="100" height="30" forecolor="#0011FF" uuid="fa0099dd-ca60-4979-bc69-6bb485dce6fc"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[WorkOut]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="30" width="100" height="30" forecolor="#1900FF" uuid="118b9303-397a-49bf-8c68-f4e45185ffbb"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sets]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="30" width="90" height="40" uuid="77a8bacf-9b5b-49e0-8d8b-4c2ace7b60fe"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{schId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="30" width="100" height="40" uuid="e2b16e2e-dea8-476a-9561-7da97a7f5f68"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="30" width="100" height="39" uuid="7a34545b-00d8-400f-81f1-fa263aac2c91"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="30" width="100" height="39" uuid="374a8844-59b1-43ed-85b7-ddf36504fafa"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{setRound}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="370" y="5" width="100" height="30" forecolor="#D65420" uuid="d319b0cd-82be-42a3-a9f4-e64a1fd1eaee"/>
+				<textElement>
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Thank you]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="50" width="140" height="20" uuid="ff575856-1a9d-4a8f-b9c1-e52289297e49"/>
+				<text><![CDATA[Softwear by ABC Company]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

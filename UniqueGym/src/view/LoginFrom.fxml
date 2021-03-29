@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="559.0" prefWidth="677.0" style="-fx-background-color: #6D214F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFromController">
+   <children>
+      <TextField fx:id="txtEmail" layoutX="281.0" layoutY="240.0" prefHeight="35.0" prefWidth="363.0" promptText="User Name">
+         <font>
+            <Font name="Calibri Light Italic" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPassword" layoutX="281.0" layoutY="290.0" prefHeight="35.0" prefWidth="363.0" promptText="Password">
+         <font>
+            <Font name="Candara Light Italic" size="18.0" />
+         </font>
+      </TextField>
+
+      <Button layoutX="323.0" layoutY="362.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="27.0" prefWidth="261.0" text="LOGIN">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExit" layoutX="585.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="42.0" prefWidth="71.0" text="Exit" textFill="#d01d1d">
+         <font>
+            <Font name="Arial Narrow Bold" size="13.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="-9.0" opacity="0.94" prefHeight="104.0" prefWidth="681.0" style="-fx-background-color: rgb(44, 62, 80);">
+         <children>
+            <Label layoutX="413.0" layoutY="10.0" prefHeight="85.0" prefWidth="261.0" text="UNIQUE GYM" textFill="#e8eded">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="72.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="115.0" fitWidth="114.0">
+               <image>
+                  <Image url="@../../../../Users/Ishu/Downloads/gym-fitness-workout-center-512.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="114.0" layoutX="122.0">
+               <image>
+                  <Image url="@../../../../Users/Ishu/Downloads/gym-fitness-workout-center-512.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="114.0" layoutX="244.0">
+               <image>
+                  <Image url="@../../../../Users/Ishu/Downloads/gym-fitness-workout-center-512.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXTextArea focusColor="#81ecec" layoutX="55.0" layoutY="108.0" prefHeight="103.0" prefWidth="625.0" promptText="WELCOME" text="                  WELCOME" unFocusColor="#dad3d3">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+      </JFXTextArea>
+      <ImageView fitHeight="61.0" fitWidth="233.0" layoutX="1.0" layoutY="496.0">
+         <image>
+            <Image url="@../../../../Users/Ishu/Pictures/Saved%20Pictures/tenor%20(2).gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

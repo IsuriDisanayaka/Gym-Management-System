@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?impo rt javafx.scene.*?>
+
+<AnchorPane fx:id="root" prefHeight="569.0" prefWidth="1102.0" style="-fx-background-color: #1B9CFC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WorkOutFromController">
+   <children>
+
+      <ImageView fitHeight="571.0" fitWidth="1120.0" layoutX="-1.0">
+         <image>
+            <Image url="@../asserts/Cover.jfif" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_CENTER" layoutY="14.0" prefHeight="60.0" prefWidth="809.0" text="WorkOut Form" textFill="#393739">
+         <font>
+            <Font name="Times New Roman Bold" size="48.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblWorkOut" layoutX="226.0" layoutY="180.0" prefHeight="295.0" prefWidth="830.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="146.0" text="WorkOut Id" />
+          <TableColumn fx:id="colName" prefWidth="221.0" text="WorkOut Name" />
+            <TableColumn fx:id="colDes" prefWidth="228.0" text="Description" />
+            <TableColumn fx:id="colOperate" minWidth="0.0" prefWidth="234.0" text="Operate" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="294.0" layoutY="117.0" onAction="#SearchoNAction" prefHeight="26.0" prefWidth="488.0" promptText="Search">
+         <font>
+            <Font name="Arial Narrow Bold" size="14.0" />
+         </font>
+      </TextField>
+      <JFXTextField fx:id="txtId" focusColor="#111317" labelFloat="true" layoutX="31.0" layoutY="148.0" onAction="#getDataOnAction" promptText="WorkOut Id" unFocusColor="#2c2828">
+         <font>
+            <Font name="Arial Narrow Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" focusColor="#111317" labelFloat="true" layoutX="31.0" layoutY="223.0" promptText="WorkOut Name" unFocusColor="#2c2828">
+         <font>
+            <Font name="Arial Narrow Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDes" focusColor="#111317" labelFloat="true" layoutX="31.0" layoutY="302.0" promptText="Description " unFocusColor="#2c2828">
+         <font>
+            <Font name="Arial Narrow Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Button layoutX="26.0" layoutY="459.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="32.0" prefWidth="160.0" style="-fx-background-color: rgb(39, 174, 96);" text="Save" textFill="#e7e4e4">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="115.0" fitWidth="114.0" layoutX="999.0">
+         <image>
+            <Image url="@../../../../Users/Ishu/Downloads/gym-fitness-workout-center-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
